@@ -1,0 +1,9 @@
+section,model_or_variant,ckpt_filename,vocab_size,context_len,embed_dim,n_heads,n_layers,dropout,max_iters,lr,n_params,best_iter,best_val_loss,elapsed_min,setting,params_M,inference_sec,accuracy
+3_minigpt,minigpt_v1_v8k_ctx64_L3,minigpt_v1.pt,8000.0,64.0,128.0,4.0,3.0,0.1,2000.0,0.0003,2658112.0,1999.0,5.9278,0.95,,,,
+3_minigpt,minigpt_v2_v16k_ctx128_L4,minigpt_v2.pt,16000.0,128.0,128.0,4.0,4.0,0.1,4000.0,0.0003,4920192.0,3999.0,5.7269,3.57,,,,
+3_minigpt,gpt_small,gpt_small.pt,8000.0,256.0,384.0,6.0,6.0,0.1,6000.0,0.0003,16890944.0,5999.0,3.8467,34.79,,,,
+5_model_comparison,MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli,,,,,,,,,,,,,,"baseline (en template, multi_label=False)",107.0,0.372,0.5625
+5_model_comparison,MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,,,,,,,,,,,,,,"baseline (en template, multi_label=False)",278.8,2.028,1.0
+5_model_comparison,MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,,,,,,,,,,,,,,exp1: uk_template ('Цей текст стосується теми {}.'),278.8,1.737,1.0
+5_model_comparison,MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,,,,,,,,,,,,,,exp2: short_template ('Категорія: {}.'),278.8,1.728,1.0
+5_model_comparison,MoritzLaurer/mDeBERTa-v3-base-mnli-xnli,,,,,,,,,,,,,,exp3: multi_label=True,278.8,1.736,1.0
